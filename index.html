@@ -33,7 +33,50 @@ body{margin:0;background:#F4EFE6;-webkit-font-smoothing:antialiased}
 @keyframes lkFade{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 @keyframes lkMarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @keyframes lkScroll{0%{transform:translateY(-105%)}60%,100%{transform:translateY(105%)}}
+
+@media (max-width: 768px) {
+  /* Make all inline grid layouts 1 column */
+  div[style*="display:grid"], div[style*="display: grid"] {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  
+  /* Fix header */
+  header {
+    flex-direction: column;
+    padding: 16px !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+  header nav {
+    flex-wrap: wrap;
+    gap: 16px !important;
+  }
+
+  /* Reduce big heights for mobile */
+  img[style*="height:520px"], iframe[style*="height:520px"] {
+    height: 300px !important;
+  }
+
+  /* Make hero text smaller */
+  h1 {
+    font-size: 42px !important;
+    line-height: 1.1 !important;
+  }
+  h2 {
+    font-size: 32px !important;
+  }
+
+  /* Reduce section paddings on mobile */
+  section {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+}
 </style>
+
 </helmet>
 
 <!-- ============ NAV ============ -->
@@ -175,7 +218,7 @@ body{margin:0;background:#F4EFE6;-webkit-font-smoothing:antialiased}
 </section>
 
 <!-- ============ GALLERY ============ -->
-<section data-screen-label="Galeri" style="max-width:1200px;margin:0 auto;padding:110px 48px 20px">
+<section data-screen-label="Galeri" style="max-width:1200px;margin:0 auto;padding:110px 48px 0px">
   <div style="display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:stretch">
     <figure style="margin:0">
       <div data-reveal="wipe" style="overflow:hidden;border-radius:6px">
@@ -193,7 +236,7 @@ body{margin:0;background:#F4EFE6;-webkit-font-smoothing:antialiased}
 </section>
 
 <!-- ============ PELAN LULUS ============ -->
-<section data-screen-label="Pelan Lulus" style="max-width:1200px;margin:0 auto;padding:30px 48px 50px">
+<section data-screen-label="Pelan Lulus" style="max-width:1200px;margin:0 auto;padding:0px 48px 50px">
   <div style="display:grid;grid-template-columns:340px 1fr;gap:48px;align-items:center">
     <div data-reveal="up">
       <p style="font-family:'Instrument Sans',sans-serif;font-size:12px;letter-spacing:.38em;color:#B99457;margin:0 0 16px"><sc-if value="{{bm}}" hint-placeholder-val="{{true}}">PELAN LULUS</sc-if><sc-if value="{{en}}" hint-placeholder-val="{{false}}">APPROVED PLAN</sc-if></p>
