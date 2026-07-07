@@ -15,7 +15,6 @@
 html{scroll-behavior:smooth}
 body{margin:0;background:#F4EFE6;-webkit-font-smoothing:antialiased}
 @keyframes lkFade{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-@keyframes vidZoom{from{transform:scale(1.08)}to{transform:scale(1)}}
 </style>
 </helmet>
 
@@ -41,9 +40,7 @@ body{margin:0;background:#F4EFE6;-webkit-font-smoothing:antialiased}
 
 <!-- ============ HERO ============ -->
 <section data-screen-label="Hero" style="position:relative;min-height:88vh;display:flex;align-items:flex-end;overflow:hidden">
-  <video autoplay loop muted playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:vidZoom 10s ease-out forwards;pointer-events:none">
-    <source src="grok-video-b03f5ff4-ae54-4cb8-8474-a0228e2d5e5d%20(2).mp4" type="video/mp4">
-  </video>
+  <img src="assets/gambar-2.jpeg" alt="Tanah lot Parit Kaspan" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
   <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,32,27,.25) 0%,rgba(20,32,27,.15) 40%,rgba(20,32,27,.82) 100%)"></div>
   <div style="position:relative;width:100%;max-width:1200px;margin:0 auto;padding:0 48px 72px;color:#F4EFE6;animation:lkFade .9s ease both">
     <p style="font-family:'Instrument Sans',sans-serif;font-size:12px;letter-spacing:.38em;margin:0 0 20px;color:#D8C9A3">KG PARIT KASPAN · PARIT RAJA · JOHOR</p>
@@ -82,7 +79,7 @@ body{margin:0;background:#F4EFE6;-webkit-font-smoothing:antialiased}
   </h2>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:0;border-top:1px solid rgba(23,53,42,.18)">
     <sc-for list="{{points}}" as="pt" hint-placeholder-count="6">
-      <div style="padding:32px 40px 36px 0;border-bottom:1px solid rgba(23,53,42,.18);transition:transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)" style-hover="transform:translateX(8px)">
+      <div style="padding:32px 40px 36px 0;border-bottom:1px solid rgba(23,53,42,.18)">
         <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:#B99457">{{ pt.num }}</div>
         <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:24px;color:#17352A;margin:10px 0 8px">{{ pt.title }}</h3>
         <p style="font-family:'Instrument Sans',sans-serif;font-size:14px;line-height:1.65;color:#4A5049;margin:0;max-width:40ch">{{ pt.body }}</p>
@@ -152,17 +149,13 @@ body{margin:0;background:#F4EFE6;-webkit-font-smoothing:antialiased}
 <!-- ============ GALLERY ============ -->
 <section data-screen-label="Galeri" style="max-width:1200px;margin:0 auto;padding:110px 48px 40px">
   <div style="display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:stretch">
-    <figure style="margin:0;display:flex;flex-direction:column">
-      <div style="overflow:hidden;border-radius:6px;box-shadow:0 18px 42px rgba(23,53,42,0.08)">
-        <img src="assets/gambar-1.jpeg" alt="Jalan masuk berturap ke tapak" style="width:100%;height:520px;object-fit:cover;display:block;transition:transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)" style-hover="transform:scale(1.05)">
-      </div>
-      <figcaption style="font-family:'Instrument Sans',sans-serif;font-size:12px;letter-spacing:.08em;color:#8A7B5C;margin-top:16px"><sc-if value="{{bm}}" hint-placeholder-val="{{true}}">Jalan masuk berturap, siap sedia.</sc-if><sc-if value="{{en}}" hint-placeholder-val="{{false}}">Paved access road, ready today.</sc-if></figcaption>
+    <figure style="margin:0">
+      <img src="assets/gambar-1.jpeg" alt="Jalan masuk berturap ke tapak" style="width:100%;height:520px;object-fit:cover;border-radius:6px;display:block">
+      <figcaption style="font-family:'Instrument Sans',sans-serif;font-size:12px;letter-spacing:.08em;color:#8A7B5C;margin-top:12px"><sc-if value="{{bm}}" hint-placeholder-val="{{true}}">Jalan masuk berturap, siap sedia.</sc-if><sc-if value="{{en}}" hint-placeholder-val="{{false}}">Paved access road, ready today.</sc-if></figcaption>
     </figure>
     <figure style="margin:0;display:flex;flex-direction:column">
-      <div style="overflow:hidden;border-radius:6px;box-shadow:0 18px 42px rgba(23,53,42,0.08)">
-        <img src="assets/gambar-2.jpeg" alt="Tapak tanah siap tambun" style="width:100%;height:520px;object-fit:cover;display:block;transition:transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)" style-hover="transform:scale(1.05)">
-      </div>
-      <figcaption style="font-family:'Instrument Sans',sans-serif;font-size:12px;letter-spacing:.08em;color:#8A7B5C;margin-top:16px"><sc-if value="{{bm}}" hint-placeholder-val="{{true}}">Tanah keras, siap tambun dan diratakan.</sc-if><sc-if value="{{en}}" hint-placeholder-val="{{false}}">Firm land, filled and levelled.</sc-if></figcaption>
+      <img src="assets/gambar-2.jpeg" alt="Tapak tanah siap tambun" style="width:100%;height:520px;object-fit:cover;border-radius:6px;display:block">
+      <figcaption style="font-family:'Instrument Sans',sans-serif;font-size:12px;letter-spacing:.08em;color:#8A7B5C;margin-top:12px"><sc-if value="{{bm}}" hint-placeholder-val="{{true}}">Tanah keras, siap tambun dan diratakan.</sc-if><sc-if value="{{en}}" hint-placeholder-val="{{false}}">Firm land, filled and levelled.</sc-if></figcaption>
     </figure>
   </div>
 </section>
@@ -327,30 +320,6 @@ class Component extends DCLogic {
     };
   }
 }
-</script>
-<script>
-  setInterval(function() {
-    var sections = document.querySelectorAll('section:not([data-screen-label="Hero"]):not(.reveal-init)');
-    if (sections.length === 0) return;
-    
-    var observer = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if(entry.isIntersecting) {
-          entry.target.style.opacity = 1;
-          entry.target.style.transform = 'translateY(0)';
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15 });
-
-    sections.forEach(function(el) {
-      el.classList.add('reveal-init');
-      el.style.opacity = 0;
-      el.style.transform = 'translateY(40px)';
-      el.style.transition = 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
-      observer.observe(el);
-    });
-  }, 500);
 </script>
 </body>
 </html>
