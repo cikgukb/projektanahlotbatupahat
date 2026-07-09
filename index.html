@@ -306,8 +306,8 @@ body{margin:0;background:#F4EFE6;-webkit-font-smoothing:antialiased}
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{
   &quot;defaultLang&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;bm&quot;, &quot;en&quot;], &quot;default&quot;: &quot;bm&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Kandungan&quot;},
-  &quot;agentName&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Razman&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Kandungan&quot;},
-  &quot;whatsapp&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;60129582210&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Kandungan&quot;},
+  &quot;agentName&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Syeda&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Kandungan&quot;},
+  &quot;whatsapp&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;60126656262&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Kandungan&quot;},
   &quot;heroVideo&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;assets/hero-video.mp4&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Media&quot;}
 }">
 class Component extends DCLogic {
@@ -430,8 +430,8 @@ class Component extends DCLogic {
   renderVals() {
     const lang = this.lang();
     const bm = lang === 'bm', en = !bm;
-    const wa = (this.props.whatsapp ?? '60129582210').replace(/\D/g, '');
-    const agentName = this.props.agentName ?? 'Razman';
+    const wa = (this.props.whatsapp ?? '60126656262').replace(/\D/g, '');
+    const agentName = this.props.agentName ?? 'Syeda';
     const heroVideo = this.props.heroVideo ?? 'assets/hero-video.mp4';
     const sel = this.state.sel;
 
